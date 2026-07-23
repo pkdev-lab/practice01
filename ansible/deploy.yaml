@@ -1,0 +1,26 @@
+---
+- name: Deploy Website
+  hosts: web
+  become: true
+
+  tasks:
+
+    - name: Pull latest Docker image
+      community.docker.docker_image:
+        name: prashantkumar1911/practice01
+        tag: v1
+        source: pull
+
+    - name: Remove existing container
+      community.docker.docker_container:
+        name: website
+        state: absent
+
+    - name: Run website container
+      community.docker.docker_container:
+        name: website
+        image: prashantkumar1911/practice01:v1
+        state: started
+        restart_policy: always
+        published_ports:
+          - "80:80"

@@ -1,0 +1,1 @@
+public_key_path = "/home/vagrant/.ssh/practice-key.pub"

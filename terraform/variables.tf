@@ -1,0 +1,18 @@
+variable "aws_region" {
+  type    = string
+  default = "us-east-1"
+}
+
+variable "instance_type" {
+  type    = string
+  default = "t3.micro"
+}
+
+variable "instance_name" {
+  type    = string
+  default = "practice01"
+}
+
+variable "public_key_path" {
+  description = "Path to SSH public key"
+}
