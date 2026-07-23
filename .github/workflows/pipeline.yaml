@@ -51,4 +51,4 @@ jobs:
 
                 ansible-playbook \
                   -i inventory.yaml \
-                  ansible/deploy.yml
+                  ansible/deploy.yaml
