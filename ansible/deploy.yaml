@@ -8,7 +8,7 @@
     - name: Pull latest Docker image
       community.docker.docker_image:
         name: prashantkumar1911/practice01
-        tag: v1
+        tag: latest
         source: pull
 
     - name: Remove existing container
@@ -19,7 +19,7 @@
     - name: Run website container
       community.docker.docker_container:
         name: website
-        image: prashantkumar1911/practice01:v1
+        image: prashantkumar1911/practice01:latest
         state: started
         restart_policy: always
         published_ports:
